@@ -14,4 +14,5 @@ class AppColors {
   static const Color vividPurpleColor = Color(0xFFAA01C5);
   static const Color raspberryPurpleColor = Color(0xFFB62150);
   static const Color pastelGoldColor = Color(0xFFF7D794);
+  static const Color coolGrayColor = Color(0xFF737687);
 }

@@ -14,7 +14,6 @@ class _UpcomingScheduleCardState extends State<UpcomingScheduleCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
       width: double.infinity,
       margin: EdgeInsets.all(16),
       padding: EdgeInsets.all(12),
@@ -62,12 +61,13 @@ class _UpcomingScheduleCardState extends State<UpcomingScheduleCard> {
                     data: 'Hair Specialist',
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.blackColor,
+                    color: AppColors.coolGrayColor,
                   ),
                 ],
               ),
               const Spacer(),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(
                     height: 36,
@@ -84,8 +84,9 @@ class _UpcomingScheduleCardState extends State<UpcomingScheduleCard> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 16),
                   Container(
+                    padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                       color: AppColors.pastelGoldColor,
                       borderRadius: BorderRadius.circular(6),
@@ -93,12 +94,16 @@ class _UpcomingScheduleCardState extends State<UpcomingScheduleCard> {
                     child: Row(
                       children: [
                         Image.asset(
-                          'assets/small_icon/phone_icon.png',
-                          height: 22,
-                          width: 22,
+                          'assets/small_icon/medal_star_icon.png',
+                          height: 12,
+                          width: 12,
                         ),
+                        const SizedBox(width: 4),
                         CustomText(
                           data: 'Top Rated',
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.blackColor,
                         ),
                       ],
                     ),
@@ -106,6 +111,43 @@ class _UpcomingScheduleCardState extends State<UpcomingScheduleCard> {
                 ],
               ),
             ],
+          ),
+          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            decoration: BoxDecoration(
+              color: AppColors.whiteSmokeColor,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/small_icon/calendar_icon.png',
+                  height: 24,
+                  width: 24,
+                ),
+                const SizedBox(width: 8),
+                const CustomText(
+                  data: 'Monday, 26 May',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.blackColor,
+                ),
+                const Spacer(),
+                Image.asset(
+                  'assets/small_icon/clock_icon.png',
+                  height: 21,
+                  width: 22,
+                ),
+                const SizedBox(width: 8),
+                const CustomText(
+                  data: '09:00 - 10:00',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.blackColor,
+                ),
+              ],
+            ),
           ),
         ],
       ),
