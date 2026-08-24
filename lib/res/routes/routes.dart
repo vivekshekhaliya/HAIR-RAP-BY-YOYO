@@ -1,0 +1,23 @@
+import 'package:hair_rep_by_yoyo/res/routes/screen_export.dart';
+
+/// This class manages app-wide route generation for navigation.
+class Routes {
+  static Route<dynamic> generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case RoutesName.splash:
+        return MaterialPageRoute(builder: (context) => const SplashScreen());
+      case RoutesName.signIn:
+        return MaterialPageRoute(builder: (context) => const SignInScreen());
+      case RoutesName.verify:
+        return MaterialPageRoute(builder: (context) => const VerifyScreen());
+      case RoutesName.bottomNavigationBarScreen:
+        return MaterialPageRoute(
+          builder: (context) => const BottomNavigationBarScreen(),
+        );
+      default:
+        return MaterialPageRoute(
+          builder: (context) => RouteErrorScreen(routeName: settings.name),
+        );
+    }
+  }
+}

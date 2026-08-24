@@ -1,0 +1,7 @@
+export 'package:flutter/material.dart';
+export 'package:hair_rep_by_yoyo/res/routes/routes_name.dart';
+export '../../view/splash_view/splash_screen.dart';
+export '../../view/sign_in_view/sign_in_screen.dart';
+export '../../view/verify_view/verify_screen.dart';
+export '../../view/error_view/route_error_screen.dart';
+export '../../view/bottom_navigation_bar_view/bottom_navigation_bar_screen.dart';
