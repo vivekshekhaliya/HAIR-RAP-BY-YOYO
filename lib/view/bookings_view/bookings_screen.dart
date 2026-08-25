@@ -312,8 +312,8 @@ class _BookingsScreenState extends State<BookingsScreen>
             address: 'S.G Highway, Ahmedabad',
             services: 'Services: Hair Cut, Hair Wash',
             onCancel: () => _showCancelBottomSheet(context),
-            onAction:
-                () {}, // e.g. Navigator.pushNamed(context, RoutesName.stylistSelect)
+            onAction: () =>
+                Navigator.pushNamed(context, RoutesName.dateTimeSelect),
             actionText: 'Repeat',
           ),
         );
