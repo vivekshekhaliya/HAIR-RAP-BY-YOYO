@@ -13,7 +13,12 @@ class ReceiptScreen extends StatelessWidget {
       backgroundColor: AppColors.offWhiteColor,
       appBar: const CustomAppBar(title: 'Receipt'),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(bottom: 100, top: 20, left: 20, right: 20),
+        padding: const EdgeInsets.only(
+          bottom: 100,
+          top: 20,
+          left: 20,
+          right: 20,
+        ),
         child: Column(
           children: [
             // QR Code
@@ -35,7 +40,7 @@ class ReceiptScreen extends StatelessWidget {
               height: 1.5,
             ),
             const SizedBox(height: 32),
-            
+
             // Booking Details Card
             Container(
               padding: const EdgeInsets.all(12),
@@ -66,9 +71,9 @@ class ReceiptScreen extends StatelessWidget {
                 ],
               ),
             ),
-            
+
             const SizedBox(height: 20),
-            
+
             // Pricing Details Card
             Container(
               padding: const EdgeInsets.all(12),
@@ -99,13 +104,8 @@ class ReceiptScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
         width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 20),
-        child: CustomAppButton(
-          text: 'Download Receipt',
-          onPressed: () {
-            // Action to download receipt
-          },
-        ),
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+        child: CustomAppButton(text: 'Download Receipt', onPressed: () {}),
       ),
     );
   }

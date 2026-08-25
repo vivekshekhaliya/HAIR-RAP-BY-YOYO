@@ -153,7 +153,7 @@ class _SalonDetailsScreenState extends State<SalonDetailsScreen>
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
         width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
         child: CustomAppButton(
           text: 'Continue (2)',
           onPressed: () {

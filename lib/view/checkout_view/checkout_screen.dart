@@ -58,7 +58,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
         width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
         child: CustomAppButton(
           text: 'Proceed',
           onPressed: () {

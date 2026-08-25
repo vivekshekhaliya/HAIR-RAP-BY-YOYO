@@ -12,11 +12,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  bool _startAnimation = false;
+
   @override
   void initState() {
     super.initState();
+    
+    // Start animation slightly after render
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() {
+        _startAnimation = true;
+      });
+    });
 
-    Future.delayed(const Duration(seconds: 2), () {
+    // Increased delay from 2s to 3s to allow the animation to play
+    Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
 
       Navigator.pushReplacementNamed(context, RoutesName.signIn);
@@ -46,10 +56,20 @@ class _SplashScreenState extends State<SplashScreen> {
             height: size.height,
             width: size.width,
           ),
-          Image.asset(
-            'assets/icons/app_icon.png',
-            height: 100,
-            width: size.width / 1.2,
+          AnimatedScale(
+            duration: const Duration(milliseconds: 1200),
+            curve: Curves.easeOutBack,
+            scale: _startAnimation ? 1.0 : 0.4,
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 1200),
+              curve: Curves.easeIn,
+              opacity: _startAnimation ? 1.0 : 0.0,
+              child: Image.asset(
+                'assets/icons/app_icon.png',
+                height: 100,
+                width: size.width / 1.2,
+              ),
+            ),
           ),
         ],
       ),
