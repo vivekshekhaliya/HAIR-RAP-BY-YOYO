@@ -7,3 +7,4 @@ export '../../view/error_view/route_error_screen.dart';
 export '../../view/bottom_navigation_bar_view/bottom_navigation_bar_screen.dart';
 export '../../view/search_location_view/search_location_screen.dart';
 export '../../view/salon_details_view/salon_details_screen.dart';
+export '../../view/stylist_select_view/stylist_select_screen.dart';

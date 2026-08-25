@@ -3,6 +3,7 @@ import 'package:hair_rep_by_yoyo/res/components/custom_app_button.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_text.dart';
 import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
 import 'package:hair_rep_by_yoyo/view/salon_details_view/components/header_view.dart';
+import 'package:hair_rep_by_yoyo/res/routes/routes_name.dart';
 
 class SalonDetailsScreen extends StatefulWidget {
   const SalonDetailsScreen({super.key});
@@ -152,8 +153,13 @@ class _SalonDetailsScreenState extends State<SalonDetailsScreen>
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
         width: double.infinity,
-        margin: EdgeInsets.symmetric(horizontal: 20),
-        child: CustomAppButton(text: 'Continue (2)'),
+        margin: const EdgeInsets.symmetric(horizontal: 20),
+        child: CustomAppButton(
+          text: 'Continue (2)',
+          onPressed: () {
+            Navigator.pushNamed(context, RoutesName.stylistSelect);
+          },
+        ),
       ),
     );
   }

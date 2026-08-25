@@ -22,6 +22,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const SalonDetailsScreen(),
         );
+      case RoutesName.stylistSelect:
+        return MaterialPageRoute(
+          builder: (context) => const StylistSelectScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),
