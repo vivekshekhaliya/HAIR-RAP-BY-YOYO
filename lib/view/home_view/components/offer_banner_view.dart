@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_text.dart';
 import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
 
+import '../../../res/routes/routes_name.dart';
+
 class OfferBannerView extends StatefulWidget {
   const OfferBannerView({super.key});
 
@@ -87,17 +89,22 @@ class _OfferBannerViewState extends State<OfferBannerView> {
           Positioned(
             right: 12,
             bottom: 12,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 9),
-              decoration: BoxDecoration(
-                color: AppColors.whiteSmokeColor,
-                borderRadius: BorderRadius.circular(6),
-              ),
-              child: CustomText(
-                data: 'Book Now',
-                fontSize: 10,
-                fontWeight: FontWeight.w500,
-                color: AppColors.blackColor,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, RoutesName.salonDetails);
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 9),
+                decoration: BoxDecoration(
+                  color: AppColors.whiteSmokeColor,
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: CustomText(
+                  data: 'Book Now',
+                  fontSize: 10,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.blackColor,
+                ),
               ),
             ),
           ),

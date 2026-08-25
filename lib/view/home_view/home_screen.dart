@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_text.dart';
 import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/categories_view.dart';
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColors.offWhiteColor,
       appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
         elevation: 0,
         title: HeaderView(),
         automaticallyImplyLeading: false,

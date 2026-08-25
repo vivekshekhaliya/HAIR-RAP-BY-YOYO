@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../res/constants/app_colors.dart';
 
@@ -19,6 +20,7 @@ class _HeaderViewState extends State<HeaderView> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
       elevation: 0,
       backgroundColor: AppColors.whiteColor,
       automaticallyImplyLeading: false,

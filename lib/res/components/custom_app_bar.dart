@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../constants/app_colors.dart';
 import 'custom_text.dart';
@@ -11,6 +12,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
       elevation: 0,
       backgroundColor: AppColors.whiteColor,
       leading: IconButton(
