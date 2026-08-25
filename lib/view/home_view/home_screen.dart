@@ -4,6 +4,7 @@ import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/categories_view.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/header_view.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/offer_banner_view.dart';
+import 'package:hair_rep_by_yoyo/view/home_view/components/salon_list_view.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/search_bar_view.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/services_view.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/upcoming_schedule_card.dart';
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const CustomText(
               data: 'Services',
               fontSize: 18,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
               color: AppColors.blackColor,
               padding: EdgeInsets.only(left: 16),
             ),
@@ -51,11 +52,49 @@ class _HomeScreenState extends State<HomeScreen> {
             const CustomText(
               data: 'Upcoming Schedule',
               fontSize: 18,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
               color: AppColors.blackColor,
               padding: EdgeInsets.only(left: 16),
             ),
             UpcomingScheduleCard(),
+
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                const CustomText(
+                  data: 'Salon Location',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.blackColor,
+                  padding: EdgeInsets.only(left: 16),
+                ),
+                const Spacer(),
+                InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/small_icon/map_pin_icon.png',
+                        height: 16,
+                        width: 16,
+                      ),
+                      const SizedBox(width: 4),
+                      const CustomText(
+                        data: 'View on Map',
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.vividPurpleColor,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 16),
+              ],
+            ),
+
+            SalonListView(),
+
+            const SizedBox(height: 20),
           ],
         ),
       ),
