@@ -17,6 +17,7 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   String _selectedSortBy = 'Nearest';
   String _selectedServiceAvailability = 'All';
+  bool _isMapLoading = true;
 
   final List<String> _sortByOptions = [
     'Nearest',
@@ -188,6 +189,14 @@ class _MapScreenState extends State<MapScreen> {
             child: GoogleMap(
               onMapCreated: (GoogleMapController controller) {
                 mapController = controller;
+                // Add a small delay to ensure map has started rendering before hiding loader
+                Future.delayed(const Duration(milliseconds: 500), () {
+                  if (mounted) {
+                    setState(() {
+                      _isMapLoading = false;
+                    });
+                  }
+                });
               },
               initialCameraPosition: CameraPosition(
                 target: _center,
@@ -221,6 +230,15 @@ class _MapScreenState extends State<MapScreen> {
               },
             ),
           ),
+
+          if (_isMapLoading)
+            const Positioned.fill(
+              child: Center(
+                child: CircularProgressIndicator(
+                  color: AppColors.primaryColor,
+                ),
+              ),
+            ),
 
           Positioned(
             top: 0,
