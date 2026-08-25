@@ -12,4 +12,5 @@ class RoutesName {
   static const String paymentScreen = 'payment_screen';
   static const String receiptScreen = 'receipt_screen';
   static const String mapScreen = 'map_screen';
+  static const String bookingsScreen = 'bookings_screen';
 }

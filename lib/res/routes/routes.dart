@@ -46,6 +46,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const MapScreen(),
         );
+      case RoutesName.bookingsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const BookingsScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),

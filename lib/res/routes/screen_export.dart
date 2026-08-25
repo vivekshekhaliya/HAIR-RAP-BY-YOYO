@@ -13,3 +13,4 @@ export '../../view/checkout_view/checkout_screen.dart';
 export '../../view/payment_view/payment_screen.dart';
 export '../../view/receipt_view/receipt_screen.dart';
 export '../../view/map_view/map_screen.dart';
+export '../../view/bookings_view/bookings_screen.dart';

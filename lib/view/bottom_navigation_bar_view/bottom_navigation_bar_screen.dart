@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/home_screen.dart';
+import 'package:hair_rep_by_yoyo/view/bookings_view/bookings_screen.dart';
 import '../../res/components/custom_text.dart';
 import '../../res/constants/app_colors.dart';
 
@@ -33,7 +34,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen>
 
   final List<Widget> _pages = const [
     HomeScreen(),
-    HomeScreen(),
+    BookingsScreen(),
     HomeScreen(),
     HomeScreen(),
     HomeScreen(),
