@@ -38,6 +38,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const PaymentScreen(),
         );
+      case RoutesName.receiptScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ReceiptScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),

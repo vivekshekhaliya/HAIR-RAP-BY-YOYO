@@ -10,4 +10,5 @@ class RoutesName {
   static const String dateTimeSelect = 'date_time_select_screen';
   static const String checkoutScreen = 'checkout_screen';
   static const String paymentScreen = 'payment_screen';
+  static const String receiptScreen = 'receipt_screen';
 }

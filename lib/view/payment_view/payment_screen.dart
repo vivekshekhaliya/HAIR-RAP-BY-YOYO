@@ -130,7 +130,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 CustomAppButton(
                   text: 'View Receipt',
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pop(context); // Close dialog
+                    Navigator.pushNamed(context, RoutesName.receiptScreen);
                   },
                 ),
                 const SizedBox(height: 12),
