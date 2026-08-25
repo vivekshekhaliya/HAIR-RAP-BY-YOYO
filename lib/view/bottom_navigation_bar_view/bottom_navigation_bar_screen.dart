@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/home_screen.dart';
 import 'package:hair_rep_by_yoyo/view/bookings_view/bookings_screen.dart';
+import '../../res/components/custom_app_bar.dart';
 import '../../res/components/custom_text.dart';
 import '../../res/constants/app_colors.dart';
 
@@ -35,9 +36,9 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen>
   final List<Widget> _pages = const [
     HomeScreen(),
     BookingsScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    ComingSoonScreen(title: 'AI Bot'),
+    ComingSoonScreen(title: 'Favourites'),
+    ComingSoonScreen(title: 'Profile'),
   ];
 
   @override
@@ -149,3 +150,40 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen>
     );
   }
 }
+
+class ComingSoonScreen extends StatelessWidget {
+  final String title;
+
+  const ComingSoonScreen({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.offWhiteColor,
+      appBar: CustomAppBar(title: title),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CustomText(
+              data: 'Coming Soon',
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              color: AppColors.blackColor,
+            ),
+            const SizedBox(height: 8),
+            const CustomText(
+              data: 'We are crafting an amazing experience for you.\nStay tuned for updates.',
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: AppColors.darkGrayColor,
+              textAlign: TextAlign.center,
+              height: 1.5,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
