@@ -4,4 +4,5 @@ class RoutesName {
   static const String verify = 'verify_screen';
   static const String bottomNavigationBarScreen = 'bottom_navigation_bar_screen';
   static const String routeError = 'route_error';
+  static const String searchLocation = 'search_location_screen';
 }

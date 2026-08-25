@@ -5,3 +5,4 @@ export '../../view/sign_in_view/sign_in_screen.dart';
 export '../../view/verify_view/verify_screen.dart';
 export '../../view/error_view/route_error_screen.dart';
 export '../../view/bottom_navigation_bar_view/bottom_navigation_bar_screen.dart';
+export '../../view/search_location_view/search_location_screen.dart';

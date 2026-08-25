@@ -14,6 +14,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const BottomNavigationBarScreen(),
         );
+      case RoutesName.searchLocation:
+        return MaterialPageRoute(
+          builder: (context) => const SearchLocationScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),
