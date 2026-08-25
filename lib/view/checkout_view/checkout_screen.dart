@@ -3,6 +3,7 @@ import 'package:hair_rep_by_yoyo/res/components/custom_app_bar.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_app_button.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_text.dart';
 import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
+import 'package:hair_rep_by_yoyo/res/routes/routes_name.dart';
 
 class CheckoutScreen extends StatefulWidget {
   const CheckoutScreen({super.key});
@@ -61,7 +62,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         child: CustomAppButton(
           text: 'Proceed',
           onPressed: () {
-            // Proceed to next step
+            Navigator.pushNamed(context, RoutesName.paymentScreen);
           },
         ),
       ),
