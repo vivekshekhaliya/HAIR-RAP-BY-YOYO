@@ -18,6 +18,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const SearchLocationScreen(),
         );
+      case RoutesName.salonDetails:
+        return MaterialPageRoute(
+          builder: (context) => const SalonDetailsScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),
