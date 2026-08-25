@@ -16,4 +16,5 @@ class AppColors {
   static const Color pastelGoldColor = Color(0xFFF7D794);
   static const Color coolGrayColor = Color(0xFF737687);
   static const Color emeraldGreenColor = Color(0xFF00A860);
+  static const Color silverGrayColor = Color(0xFFCDCFD0);
 }

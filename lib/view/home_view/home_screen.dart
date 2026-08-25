@@ -9,6 +9,8 @@ import 'package:hair_rep_by_yoyo/view/home_view/components/search_bar_view.dart'
 import 'package:hair_rep_by_yoyo/view/home_view/components/services_view.dart';
 import 'package:hair_rep_by_yoyo/view/home_view/components/upcoming_schedule_card.dart';
 
+import '../../res/routes/routes_name.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -70,7 +72,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const Spacer(),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, RoutesName.mapScreen);
+                  },
                   child: Row(
                     children: [
                       Image.asset(

@@ -12,3 +12,4 @@ export '../../view/date_time_select_view/date_time_select_screen.dart';
 export '../../view/checkout_view/checkout_screen.dart';
 export '../../view/payment_view/payment_screen.dart';
 export '../../view/receipt_view/receipt_screen.dart';
+export '../../view/map_view/map_screen.dart';

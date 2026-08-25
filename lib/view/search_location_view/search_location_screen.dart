@@ -135,47 +135,50 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                 itemCount: _recentLocations.length,
                 itemBuilder: (context, index) {
                   final location = _recentLocations[index];
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 20.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/small_icon/location_pin_icon.png',
-                          height: 24,
-                          width: 24,
-                          color: AppColors.blackColor,
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              CustomText(
-                                data: location['title'] ?? '',
-                                color: AppColors.blackColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              if (location['subtitle']!.isNotEmpty) ...[
-                                const SizedBox(height: 4),
-                                CustomText(
-                                  data: location['subtitle'] ?? '',
-                                  color: AppColors.mediumGrayColor,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ],
-                            ],
+                  return GestureDetector(
+                    onTap: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 20.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/small_icon/location_pin_icon.png',
+                            height: 24,
+                            width: 24,
+                            color: AppColors.blackColor,
                           ),
-                        ),
-                        Image.asset(
-                          'assets/small_icon/close_icon.png',
-                          height: 12,
-                          width: 12,
-                          color: AppColors.blackColor,
-                        ),
-                      ],
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomText(
+                                  data: location['title'] ?? '',
+                                  color: AppColors.blackColor,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                if (location['subtitle']!.isNotEmpty) ...[
+                                  const SizedBox(height: 4),
+                                  CustomText(
+                                    data: location['subtitle'] ?? '',
+                                    color: AppColors.mediumGrayColor,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ),
+                          Image.asset(
+                            'assets/small_icon/close_icon.png',
+                            height: 12,
+                            width: 12,
+                            color: AppColors.blackColor,
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
