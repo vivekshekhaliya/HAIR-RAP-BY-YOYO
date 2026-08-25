@@ -26,6 +26,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const StylistSelectScreen(),
         );
+      case RoutesName.dateTimeSelect:
+        return MaterialPageRoute(
+          builder: (context) => const DateTimeSelectScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),

@@ -3,6 +3,7 @@ import 'package:hair_rep_by_yoyo/res/components/custom_app_bar.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_app_button.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_text.dart';
 import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
+import 'package:hair_rep_by_yoyo/res/routes/routes_name.dart';
 
 class StylistSelectScreen extends StatefulWidget {
   const StylistSelectScreen({super.key});
@@ -201,7 +202,12 @@ class _StylistSelectScreenState extends State<StylistSelectScreen> {
       floatingActionButton: Container(
         width: double.infinity,
         margin: const EdgeInsets.symmetric(horizontal: 20),
-        child: CustomAppButton(text: 'Select & Continue', onPressed: () {}),
+        child: CustomAppButton(
+          text: 'Select & Continue',
+          onPressed: () {
+            Navigator.pushNamed(context, RoutesName.dateTimeSelect);
+          },
+        ),
       ),
     );
   }
