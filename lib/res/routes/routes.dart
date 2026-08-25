@@ -30,6 +30,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const DateTimeSelectScreen(),
         );
+      case RoutesName.checkoutScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CheckoutScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => RouteErrorScreen(routeName: settings.name),

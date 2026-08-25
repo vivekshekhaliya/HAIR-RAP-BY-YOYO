@@ -9,3 +9,4 @@ export '../../view/search_location_view/search_location_screen.dart';
 export '../../view/salon_details_view/salon_details_screen.dart';
 export '../../view/stylist_select_view/stylist_select_screen.dart';
 export '../../view/date_time_select_view/date_time_select_screen.dart';
+export '../../view/checkout_view/checkout_screen.dart';

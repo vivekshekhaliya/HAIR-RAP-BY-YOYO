@@ -3,6 +3,7 @@ import 'package:hair_rep_by_yoyo/res/components/custom_app_bar.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_app_button.dart';
 import 'package:hair_rep_by_yoyo/res/components/custom_text.dart';
 import 'package:hair_rep_by_yoyo/res/constants/app_colors.dart';
+import 'package:hair_rep_by_yoyo/res/routes/routes_name.dart';
 
 class DateTimeSelectScreen extends StatefulWidget {
   const DateTimeSelectScreen({super.key});
@@ -76,7 +77,7 @@ class _DateTimeSelectScreenState extends State<DateTimeSelectScreen> {
         child: CustomAppButton(
           text: 'Confirm Appointment',
           onPressed: () {
-            // Confirm action
+            Navigator.pushNamed(context, RoutesName.checkoutScreen);
           },
         ),
       ),
